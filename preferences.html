@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Preferences</title>
+</head>
+<body>
+
+<h1>Preferences</h1>
+
+<label>Claude API Key</label>
+<br>
+
+<input
+    type="password"
+    id="claudeKey"
+    placeholder="Enter Claude API Key">
+
+<br><br>
+
+<button onclick="saveKey()">
+    Save
+</button>
+
+<script>
+function saveKey() {
+
+    const key =
+        document.getElementById("claudeKey").value;
+
+    localStorage.setItem(
+        "claude_api_key",
+        key
+    );
+
+    alert("Saved");
+}
+</script>
+
+</body>
+</html>
